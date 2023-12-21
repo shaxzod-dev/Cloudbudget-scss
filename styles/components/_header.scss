@@ -1,0 +1,28 @@
+.page-header{
+    width: 100%;
+    height: 782px;
+    background: url(../../images/header-img.png) center no-repeat    ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    @include media(950) {
+        height: 650px;
+    }
+
+    @include media(768) {
+        height: 550px;
+    }   
+    
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(90deg, rgba(213, 32, 71, 0.80) 0%, rgba(238, 61, 27, 0.80) 100%);
+    }
+}

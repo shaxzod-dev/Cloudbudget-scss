@@ -1,0 +1,101 @@
+.money {
+    width: 100%;
+    background-color: $primary;
+    padding-block: 95px;
+
+    &-content {
+        @include flexBetween;
+        column-gap: 60px;
+
+        @include media(993){
+            flex-direction: column;
+            row-gap: 30px;
+        }
+    }
+
+    &-info {
+        flex-basis: 50%;
+
+        
+        @include media(993){
+            text-align: center;
+        }
+
+        &_title {
+            color: $secondary;
+            font-size: 36px;
+            font-weight: 400;
+            max-width: 363px;
+            width: 100%;
+            line-height: 130%;
+
+            @include media(993){
+                max-width: 100%;
+            }
+        }
+
+        &_text {
+            color: $secondary;
+            text-align: justify;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 140%;
+            margin-block: 40px ;
+            max-width: 445px;
+            width: 100%;
+
+            @include media(993){
+                text-align: center;
+            }
+        }
+
+        .info-media{
+            @include justflex;
+            column-gap: 23px;
+
+            @include media(993){
+                justify-content: center;
+            }
+        }
+    }
+
+    &-slider{
+        max-width: 535px;
+        width: 100%;
+        height: 311px;
+        position: relative;
+        @include flexCenter;
+
+        &_img{
+            position: absolute;
+        }
+
+        .first{
+            display: block;
+            max-width: 445px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 15px;
+            z-index: 4;
+        }
+        .second{
+            left: 0px ;
+            top: 25px;
+            opacity: 0.5;
+
+            @include media(430){
+                display: none;
+            }
+        }
+        .third{
+            right: 0px;
+            top: 25px;
+            opacity: 0.5;
+
+            @include media(430){
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.contact {
+    padding: 117px 0 78px;
+
+    &-content {
+        @include flexBetween;
+        gap: 30px;
+
+        @include media(900){
+            flex-direction: column;
+        }
+    }
+
+    .content-info {
+        transform: translateY(-97px);
+        max-width: 440px;
+        width: 100%;
+
+        @include media(900){
+            margin-top: 87px;
+        }
+
+        &_title {
+            margin-bottom: 48px;
+        }
+    }
+
+    .content-register {
+        max-width: 540px;
+
+        &_div {
+            @include justflex;
+            column-gap: 15px;
+        }
+
+        &_name {
+            width: 255px;
+            height: 60px;
+            flex-shrink: 0;
+            border-radius: 6px;
+            border: 1px solid var(--Gray-1, #333);
+            color: rgba(19, 39, 67, 0.50);
+            font-size: 16px;
+            font-weight: 400;
+            padding: 21px 31px;
+            margin-bottom: 30px;
+        }
+
+        &_tel {
+            max-width: 540px; 
+            width: 100%;
+            height: 60px;
+            flex-shrink: 0;
+            border-radius: 6px;
+            border: 1px solid var(--Gray-1, #333);
+            color: rgba(19, 39, 67, 0.50);
+            font-size: 16px;
+            font-weight: 400;
+            padding: 21px 31px;
+            margin-bottom: 30px;
+
+        }
+
+        &_submit {
+            width: 160px;
+            height: 50px;
+            flex-shrink: 0;
+            border-radius: 6px;
+            border: 1.5px solid $primary;
+            background: $primary;
+            color: $secondary;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            transition: .4s;
+
+            &:hover{
+                background-color: $secondary;
+                color: $primary;
+                cursor: pointer;
+            }
+        }
+    }
+
+}

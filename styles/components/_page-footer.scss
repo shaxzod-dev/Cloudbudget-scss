@@ -1,0 +1,80 @@
+.page-footer {
+    background-color: $gray;
+    padding-block: 85px;
+}
+
+.footer-content {
+    @include flexBetween;
+    
+    @include media(660){
+        flex-direction: column;
+        @include flexBetween;
+    }
+}
+
+.content-address {
+
+    transform: translateY(-30px);
+
+    .title {
+        @include Title;
+        margin-bottom: 33px;
+    }
+
+    &_text {
+        width: 176px;
+        @include text;
+    }
+}
+
+.content-services {
+
+    .title {
+        @include Title;
+        margin-bottom: 28px;
+    }
+
+    &_text {
+        @include text;
+        width: 67px;
+    }
+}
+
+.content-touch {
+
+    transform: translateY(-10px);
+
+
+    .title {
+        @include Title;
+        margin-bottom: 33px;
+    }
+
+    &_logo {
+        margin-top: 20px;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        row-gap: 11px;
+
+        &_link {
+            @include text;
+        }
+
+
+    }
+
+}
+
+.content-support {
+
+    transform: translateY(-30px);
+
+
+    .title {
+        @include Title;
+        margin-bottom: 33px;
+        }
+}

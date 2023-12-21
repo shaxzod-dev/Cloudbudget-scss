@@ -1,0 +1,105 @@
+.header-banner {
+    position: relative;
+    z-index: 1;
+    padding-top: 177px;
+    text-align: center;
+
+    
+    @include media(950){
+        padding-top: 120px;
+    }
+    
+    @include media(768){
+        padding-top: 80px;
+    }
+
+    @include media(576){
+        padding-top: 60px;
+    }
+
+    &_title {
+        color: $secondary;
+        font-size: 72px;
+        font-weight: 700;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+
+        @include media(950){
+            font-size: 60px;
+        }
+
+        @include media(576){
+            font-size: 45px;
+        }
+
+        @include media(420){
+            font-size: 35px;
+        }
+
+        @include media(350){
+            font-size: 32px;
+        }
+
+    }
+    
+
+    &_text {
+        margin-block: 39px;
+        max-width: 580px;
+        margin-inline: auto;
+        color: $secondary;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 150%;
+
+        @include media(950){
+            font-size: 18px;
+            margin-block: 30px;
+        }
+
+        @include media(768){
+            font-size: 16px;
+            margin-block: 20px;
+        }
+
+        @include media(750){
+            font-size: 21px;
+            margin: 35px 60px;
+        }
+
+    }
+
+    &_btn {
+        padding: 16px 52px;
+        color: $primary;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        border-radius: 6px;
+        background: $secondary;
+        transition: .4s;
+
+        @include media(950){
+            padding: 12px 40px;
+        }
+
+        @include media(750){
+            font-size: 15px;
+            padding: 13px 45px;
+        }
+
+        @include media(500){
+            font-size: 12px;
+            padding: 10px 40px;
+        }
+
+        @include media(440){
+            font-size: 10px;
+            padding: 8px 35px;
+        }
+    }
+    &_btn:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
